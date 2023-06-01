@@ -10,13 +10,13 @@ body {
   /* Navigation Bar */
   
   #home {
-    background-color:  #7600bc;
+    background-color: #445fb7f0;
     padding-bottom: 1cm;
-    margin-left:-1cm;
-    margin-right:-1cm;
-    margin-top:-1cm;
-    padding-top: 2cm;
-    padding-bottom: 2cm;
+    margin-left: -8px;
+    margin-right: 0vh;
+    margin-top: -2vh;
+    padding-top: 15px;
+    padding-bottom: 65px;
     height: 5mm;
    }
   
@@ -41,9 +41,9 @@ body {
   
   .profile_name {
     float: left;
-    padding-left: 55px;
-    color: lightgreen;
-    font-size: 30px;
+    padding-left: 15px;
+    color: #d8e1ce;
+    font-size: 25px;
 }
   
   .profile_name .contact_info {
@@ -98,6 +98,10 @@ body {
     align-items: center;
   }
   
+  div.content {
+    padding-left: 90px;
+  }
+
   #about-me h1 {
     font-size: 65px;
     margin-top: 90px;
@@ -111,7 +115,10 @@ body {
   }
   
   .profile_image {
-    width: 550px;
+    border-radius: 30px;
+    border-color: aqua;
+    border: 5px solid #8c3535;
+    width: 360px;
     height: fit-content;
     vertical-align: middle;
     margin: 5px;
