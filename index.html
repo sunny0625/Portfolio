@@ -6,6 +6,30 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <script src="scrip.js" defer type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('qieY60GYQop-kFTfG');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact_form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_0ujucen','template_0by8u7f', '#contact_form')
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+
 </head>
 
 <body>
@@ -19,7 +43,8 @@
                         mail
                         </span>
                     <!-- <img src="envelope.png" alt="https://icons8.com/icon/124377/circled-envelope" /> -->
-                    sukhbirsingh2408@gmail.com
+                    
+                    <a href="sukhbirsingh2408@gmail.com">Mail</a>
                 </div>
                 <div style="clear:both;"></div>
                 <div class="contact_info">
@@ -54,12 +79,20 @@
                 <img src="img/hand-wave.png" alt="&#128075;" width="60px" />
             </h1>
             <p>
-                I am a full stack web developer with less than a year of experience in both UI and Back-End.
+                I am a Machine Learning Engineer web developer with less than a year of experience in both UI and Back-End.
                 I'm working on this site. Great thing takes time.
                 Currently pursuing B.Tech in CSE from GGSIPU University.
                 <br>
             <div id="quote">
                 "Coding come with confidence and passion."
+            </div>
+            <div class="under_construction">
+                <h2>Site Under construction!</h2>
+                <h4>
+                    <a href="#contact">
+                        But Still You can contact us!
+                    </a>
+                </h6>
             </div>
             </p>
         </div>
@@ -171,14 +204,23 @@
     <!-- Recommendation Form -->
     <section id="contact">
         <div class="flex_center">
-            <fieldset>
+            <form id="contact_form">
+                <input type="text" name="contact_number" placeholder="Name" required>
+                <!-- <input type="text" name="user_name"> -->
+                <!-- <label>Email</label> -->
+                <input type="email" name="user_email" placeholder="Email Address" required>
+                <textarea name="message" placeholder="Again Enter Name, Email & Message"></textarea>
+                <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
+                <!-- <input type="submit" value="Send"> -->
+            </form>
+            <!-- <fieldset>
                 <legend class="introduction">Leave a Recommendation</legend>
                 <input type="text" placeholder="Name (Optional)"> <br />
                 <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
                 <div class="flex_center">
                     <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
                 </div>
-            </fieldset>
+            </fieldset> -->
         </div>
     </section>
 
