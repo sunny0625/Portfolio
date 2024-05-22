@@ -4,26 +4,27 @@
 <head>
     <title>Sukhbir Singh - Portfolio</title>
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <script src="scrip.js" defer type="text/javascript"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
-        (function() {
+        (function () {
             // https://dashboard.emailjs.com/admin/account
             emailjs.init('qieY60GYQop-kFTfG');
         })();
     </script>
     <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact_form').addEventListener('submit', function(event) {
+        window.onload = function () {
+            document.getElementById('contact_form').addEventListener('submit', function (event) {
                 event.preventDefault();
                 // generate a five digit number for the contact_number variable
                 this.contact_number.value = Math.random() * 100000 | 0;
                 // these IDs from the previous steps
-                emailjs.sendForm('service_0ujucen','template_0by8u7f', '#contact_form')
-                    .then(function() {
+                emailjs.sendForm('service_0ujucen', 'template_0by8u7f', '#contact_form')
+                    .then(function () {
                         console.log('SUCCESS!');
-                    }, function(error) {
+                    }, function (error) {
                         console.log('FAILED...', error);
                     });
             });
@@ -41,16 +42,16 @@
                 <div class="contact_info">
                     <span class="material-symbols-outlined">
                         mail
-                        </span>
+                    </span>
                     <!-- <img src="envelope.png" alt="https://icons8.com/icon/124377/circled-envelope" /> -->
-                    
-                    <a href="mailto:sukhbirsingh2408@gmail.com">Send Mail</a>
+
+                    <a class="mail" href="mailto:sukhbirsingh2408@gmail.com">Send Mail</a>
                 </div>
                 <div style="clear:both;"></div>
                 <div class="contact_info">
                     <span class="material-symbols-outlined">
                         call
-                        </span>
+                    </span>
                     <!-- <img src="phone.png" alt="https://icons8.com/icon/124377/circled-envelope" /> -->
                     +91 9818113766
 
@@ -79,7 +80,8 @@
                 <img src="img/hand-wave.png" alt="&#128075;" width="60px" />
             </h1>
             <p>
-                I am a Machine Learning Engineer web developer with less than a year of experience in both UI and Back-End.
+                I am a Machine Learning Engineer web developer with less than a year of experience in both UI and
+                Back-End.
                 I'm working on this site. Great thing takes time.
                 Currently pursuing B.Tech in CSE from GGSIPU University.
                 <br>
@@ -92,7 +94,7 @@
                     <a href="#contact">
                         But Still You can contact us!
                     </a>
-                </h6>
+                    </h6>
             </div>
             </p>
         </div>
@@ -184,18 +186,24 @@
         <div class="all_recommendations" id="all_recommendations">
             <div class="recommendation">
                 <span>&#8220;</span>
-                Work samples Use samples that showcase your range of skills. Depending on your profession, your portfolio should include a wide variety of writing samples,photographs, images, project summaries/reports. Don't have professional experience, using work from school, club/volunteer projects.
+                Work samples Use samples that showcase your range of skills. Depending on your profession, your
+                portfolio should include a wide variety of writing samples,photographs, images, project
+                summaries/reports. Don't have professional experience, using work from school, club/volunteer projects.
                 <span>&#8221;</span>
             </div>
             <div class="recommendation">
                 <span>&#8220;</span>
-                Proof of any degrees, licenses or certifications. Listing this information on your resume, include educational transcripts, copies of licenses or certificates or professional development seminars you attended. This information
+                Proof of any degrees, licenses or certifications. Listing this information on your resume, include
+                educational transcripts, copies of licenses or certificates or professional development seminars you
+                attended. This information
                 increases your credibility and highlights your qualifications for the role.
                 <span>&#8221;</span>
             </div>
             <div class="recommendation">
                 <span>&#8220;</span>
-                Letters of recommendation, references, testimonials or reviews You can include a reference contact page and testimonials from clients that demonstrate your professional qualities, skills and abilities. Aim to include three to five people that are willing to positively address your professional performance.
+                Letters of recommendation, references, testimonials or reviews You can include a reference contact page
+                and testimonials from clients that demonstrate your professional qualities, skills and abilities. Aim to
+                include three to five people that are willing to positively address your professional performance.
                 <span>&#8221;</span>
             </div>
         </div>
@@ -227,9 +235,11 @@
     <div class="iconbutton">
         <a href="#home">
             <!--Add the code here for the logo to appear and the icon to be actionable-->
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
+                width="63px">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
         </a>
     </div>
 
